@@ -11,7 +11,7 @@ select * from "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF1000"."ORDERS" where o_orderpriori
 
 
 -- Create a materialized view ---
-create or replace secure materialized view vw_aggregated_orders as 
+create or replace materialized view vw_aggregated_orders as 
 select 
     count(1) as total_orders, 
     O_ORDERSTATUS as order_status , 
